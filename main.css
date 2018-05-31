@@ -374,7 +374,7 @@ header .logo-section h2.logo{
     background-color: #e1c653;
 }
 
-.about section{
+.about section:not(.mission){
     margin-bottom: 130px;
     border-top: 1px solid #f1f1f1;
 }
