@@ -273,7 +273,7 @@ header .logo-section h2.logo{
     background-image: url('images/about_bg.jpg');
     background-size: cover;
     background-position: center;
-    padding: 100px 70px 30px;
+    padding: 60px 70px 30px;
     position: fixed;
     left: 0;
     top: 0;
@@ -353,7 +353,7 @@ header .logo-section h2.logo{
 .about{
     color: #585858;
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.5;
 }
 
  .about h1.title {
@@ -376,18 +376,54 @@ header .logo-section h2.logo{
 
 .about section{
     margin-bottom: 130px;
+    border-top: 1px solid #f1f1f1;
 }
 
-.about .mission div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 0;
+body.about section.info {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    align-items: center;
+    background-color: #fbfbfb;
+    padding: 20px 20% 20px 290px;
+    margin-bottom: 0;
 }
 
-.about .mission div .icon {
+body.about section.info div {
+    margin-left: 25px;
+}
+body.about section.info div a {
+    text-decoration: none;
+    color: #585858;
+}
+
+.about .mission div,
+.about .work div{
+      display: grid;
+     grid-template-columns: auto auto;
+     width: 80%;
+}
+
+.about .work div{
+     grid-template-columns: auto auto auto;
+ }
+
+.about .mission div article,
+.about .work div article{
+    display: grid;
+    align-items: center;
+    margin: 0 40px 20px 0;
+    grid-template-columns: 76px auto;
+}
+
+.about .work div article{
+    grid-template-columns: 76px auto;
+}
+
+
+.about .mission div article .icon {
     width: 52px;
     height: 52px;
+    margin-right: 10px;
     background: url('images/aboutus_sprite.png') 0 0;
 }
 
@@ -403,27 +439,11 @@ header .logo-section h2.logo{
     background: url('images/aboutus_sprite.png') no-repeat -130px -7px;
 }
 
-.about .mission p {
-    flex: 38%;
-    margin: 0 20px 20px;
-}
-
-.about .mission p {
-    flex: 38%;
-    margin: 0 20px 20px;
-}
-
-
 .about .work > div .icon{
     margin: 20px;
     width: 38px;
     height: 38px;
     flex: 33%;
-}
-
-.about .work > div {
-    display: flex;
-    justify-content: space-between;
 }
 
 .about .work div #icon5 {
