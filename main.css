@@ -10,7 +10,7 @@
     padding: 34px 70px 0;
     background:url('images/homepage.jpg');
     background-size: 1900px 1200px;
-    font-family: 'PT Serif', serif;
+    font-family: 'PT Serif', serif !important;
 }
 
 
@@ -274,7 +274,11 @@ header .logo-section h2.logo{
     background-size: cover;
     background-position: center;
     padding: 100px 70px 30px;
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 2;
 }
 
 .page header::after{
@@ -300,36 +304,144 @@ header .logo-section h2.logo{
 
 .sidenav {
     height: 100%;
-    width: 160px;
+    width: 216px;
     position: fixed;
-    top: auto;
-    left: 0;
+    top: 0;
     background-color: #fbfbfb;
     overflow-x: hidden;
-    padding-top: 110px;
+    padding-top: 169px;
     z-index: 1;
 }
 
 .sidenav a {
-    padding: 6px 8px 6px 16px;
+    position: relative;
+    margin: 20px 0 20px 61px;
+    padding: 10px 0;
     text-decoration: none;
     font-size: 18px;
     color: #606060;
     display: block;
+
+}
+.sidenav a:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #e1c653;
 }
 
-.sidenav a:hover, .sidenav a:first-child {
+.sidenav a:hover{
     color: #3d5a76;
 }
 .about .sidenav a:first-child,
 .services .sidenav a:last-child {
     font-weight: bold;
+    color: #3d5a76;
 }
 
 .page main.container{
-    margin: 20px 0 0 290px; 
+    margin: 189px 0 0 290px; 
     padding: 0px 10px;
 
 }
 
 /*About us*/
+
+.about{
+    color: #585858;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+ .about h1.title {
+    position: relative;
+    font-size: 30px;
+    color: #3d5a76;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+ }
+
+ .about h1.title:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #e1c653;
+}
+
+.about section{
+    margin-bottom: 130px;
+}
+
+.about .mission div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.about .mission div .icon {
+    width: 52px;
+    height: 52px;
+    background: url('images/aboutus_sprite.png') 0 0;
+}
+
+.about .mission div #icon2 {
+    background: url('images/aboutus_sprite.png') no-repeat -191px -6px;
+}
+
+.about .mission div #icon3 {
+    background: url('images/aboutus_sprite.png') no-repeat -65px -4px;
+}
+
+.about .mission div #icon4 {
+    background: url('images/aboutus_sprite.png') no-repeat -130px -7px;
+}
+
+.about .mission p {
+    flex: 38%;
+    margin: 0 20px 20px;
+}
+
+.about .mission p {
+    flex: 38%;
+    margin: 0 20px 20px;
+}
+
+
+.about .work > div .icon{
+    margin: 20px;
+    width: 38px;
+    height: 38px;
+    flex: 33%;
+}
+
+.about .work > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about .work div #icon5 {
+    background: url('images/aboutus_sprite.png') no-repeat -1px -74px;
+}
+
+.about .work div #icon6 {
+    background: url('images/aboutus_sprite.png') no-repeat -47px -68px;
+}
+
+.about .work div #icon7 {
+    background: url('images/aboutus_sprite.png') no-repeat -97px -69px;
+}
+
+
+.page footer{
+    position: initial;
+    color: #aaaaaa;
+    background-color: #fff;
+    border: 1px solid #aaaaaa;
+}
