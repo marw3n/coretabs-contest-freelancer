@@ -26,9 +26,6 @@
     z-index: -99;
 }
 
-.burgermenu{
-    display: none;
-}
 
 header{
 	display: flex;
@@ -76,6 +73,42 @@ header .logo-section h2.logo{
     color: #fff;
 }
 
+/*burger menu*/
+
+.burgermenu {
+    display: none;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.bar1,.bar2, .bar3 {
+    width: 25px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.bar2{
+    width: 15px;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+    background-color: #3d5a76;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: #3d5a76;
+}
+
+.menuFull{
+    display: block !important;
+}
 
 .home .container{
 	margin: 80px 170px 0;
@@ -102,12 +135,15 @@ header .logo-section h2.logo{
 }
 
 .home .boxes {
-	position: relative;
+	position: fixed;
+    height: 50%;
+    right: 240px; /* (body padding + container margin) */
+    left: 240px; /* (body padding + container margin) */
+    bottom: 0;
     display: flex;
-      -webkit-box-shadow: 20px 0px 25px 5px #295d92;
-  -moz-box-shadow: 20px 0px 25px 5px #295d92;
-  box-shadow: 22px 0px 35px 0px rgba(0,0,0,0.5);
-      margin: 80px 0px 0;
+    -webkit-box-shadow: 20px 0px 25px 5px #295d92;
+    -moz-box-shadow: 20px 0px 25px 5px #295d92;
+    box-shadow: 22px 0px 35px 0px rgba(0,0,0,0.5);
 }
 
 .home .box {
@@ -167,17 +203,31 @@ header .logo-section h2.logo{
     .home .container{
         margin: 80px 80px 0
     }       
+    .home .boxes {
+        position: fixed;
+        height: 50%;
+        right: 150px; /* (body padding + container margin) */
+        left: 150px; /* (body padding + container margin) */
+    }
 }
 @media only screen and (max-width: 991px) {
     .home .container {
         margin: 80px 0px 0;
+    }
+    .home .boxes {
+        position: fixed;
+        height: 50%;
+        right: 70px; /* (body padding + container margin) */
+        left: 70px; /* (body padding + container margin) */
     }
 }
 @media only screen and (max-width: 767px) {
     .home {
         padding: 34px 34px 0;
     }
-    .home header {
+
+    .home > header {
+        position: fixed;
         justify-content: flex-start;
     }
     .burgermenu{
@@ -188,7 +238,7 @@ header .logo-section h2.logo{
     .home nav.menu {
         position: fixed;
         background-color: rgba(255,255,255,0.9);
-        z-index: 999;
+        z-index: 9;
         width: 100%;
         height: 100%;
         text-align: center;
@@ -206,6 +256,8 @@ header .logo-section h2.logo{
 
     .home .boxes{
         display: block;
+        position: initial;
+        margin: 80px 0 90px;
     }
     .home .box{
         width: 100%;
@@ -269,7 +321,8 @@ header .logo-section h2.logo{
 .sidenav a:hover, .sidenav a:first-child {
     color: #3d5a76;
 }
-.sidenav a:first-child {
+.about .sidenav a:first-child,
+.services .sidenav a:last-child {
     font-weight: bold;
 }
 
