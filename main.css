@@ -1,0 +1,282 @@
+*{
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.home{
+    position: relative;
+    margin: 0;
+    padding: 34px 70px 0;
+    background:url('images/homepage.jpg');
+    background-size: 1900px 1200px;
+    font-family: 'PT Serif', serif;
+}
+
+
+.home::before{
+	position: fixed;
+    background-color: rgba(30, 101, 184, 0.5);
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -99;
+}
+
+.burgermenu{
+    display: none;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+}
+
+header a{
+	z-index: 1;
+}
+
+header .logo-section{
+	display: flex;
+	justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+
+header .logo-section .logo{
+		color: #fff;
+		font-weight: 300;
+		margin: 0;
+}
+
+header .logo-section h1.logo{
+	font-size: 22px;
+	border-right: 2px solid #fff;
+	padding-right: 10px;
+}
+
+header .logo-section h2.logo{
+	font-size: 18px;
+    line-height: 0.8;
+    padding-left: 4px;
+}
+
+.home nav.menu {
+    list-style-type: none;
+    display: flex;
+    color: #fff;
+}
+
+.home nav.menu a{
+    text-decoration: none;
+    padding: 0 10px;
+    color: #fff;
+}
+
+
+.home .container{
+	margin: 80px 170px 0;
+	/*background-color: rgba(30, 101, 184, 0.5);*/
+}
+
+.home .title h1 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    width: 640px;
+    position: relative;
+    padding: 15px 0;
+}
+
+.home .title h1:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 5px;
+    background-color: #e1c653;
+}
+
+.home .boxes {
+	position: relative;
+    display: flex;
+      -webkit-box-shadow: 20px 0px 25px 5px #295d92;
+  -moz-box-shadow: 20px 0px 25px 5px #295d92;
+  box-shadow: 22px 0px 35px 0px rgba(0,0,0,0.5);
+      margin: 80px 0px 0;
+}
+
+.home .box {
+    width: 50%;
+    background-color: #fff;
+    padding: 7% 7% 14%;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.15)
+}
+
+
+.boxes img{
+	position: absolute;
+	right: 40px;
+
+}
+
+.box h2.title {
+    font-size: 32px;
+    font-weight: 300;
+    color: #3d5a76;
+    padding-bottom: 34px;
+}
+
+
+.box p.desc {
+    font-size: 16px;
+    font-weight: 300;
+    color: #517495;
+}
+
+.box .more{
+    text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 300;
+	color: #7491ad;
+	border: 1px solid #7491ad;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+ footer{
+	padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+	color: #9fc5ec;
+	font-size: 13px;
+	background-color: rgba(18, 69, 120, 0.9);
+}
+
+
+@media only screen and (max-width: 1179px) {
+    .home .container{
+        margin: 80px 80px 0
+    }       
+}
+@media only screen and (max-width: 991px) {
+    .home .container {
+        margin: 80px 0px 0;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .home {
+        padding: 34px 34px 0;
+    }
+    .home header {
+        justify-content: flex-start;
+    }
+    .burgermenu{
+        display: block;
+        margin-right: 35px;
+    }    
+    
+    .home nav.menu {
+        position: fixed;
+        background-color: rgba(255,255,255,0.9);
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 50% 0;
+        margin: -34px;
+        display: none;
+
+    }
+    .home nav.menu a {
+        color: #3d5a76;
+        display: block;
+        font-size: 26px;
+        padding: 30px 0;
+    }
+
+    .home .boxes{
+        display: block;
+    }
+    .home .box{
+        width: 100%;
+    }
+
+
+}
+
+
+/*common header*/
+
+.page header{
+    background-image: url('images/about_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 70px 30px;
+    position: relative;
+}
+
+.page header::after{
+    position: absolute;
+    background-color: rgba(30, 101, 184, 0.5);
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.page header div {
+    z-index: 999;
+}
+
+.page header a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    top: auto;
+    left: 0;
+    background-color: #fbfbfb;
+    overflow-x: hidden;
+    padding-top: 110px;
+    z-index: 1;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #606060;
+    display: block;
+}
+
+.sidenav a:hover, .sidenav a:first-child {
+    color: #3d5a76;
+}
+.sidenav a:first-child {
+    font-weight: bold;
+}
+
+.page main.container{
+    margin: 20px 0 0 290px; 
+    padding: 0px 10px;
+
+}
+
+/*About us*/
