@@ -281,6 +281,10 @@ header .logo-section h2.logo{
     z-index: 2;
 }
 
+.page.services header{
+    background-image: url('images/services_bg.jpg');
+}
+
 .page header::after{
     position: absolute;
     background-color: rgba(30, 101, 184, 0.5);
